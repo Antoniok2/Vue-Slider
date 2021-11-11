@@ -24,7 +24,7 @@
                 <div v-for="slide, i in slides" class="thumb" :class="i === activeClass ? 'active' : '' " :mykey="i">
                     <img :src="slide.image" :alt="slide.title">
                 </div>
-                <div class="prev"><i class="fas fa-arrow-circle-up"></i></div>
+                <div @click="prewSlide" class="prev"><i class="fas fa-arrow-circle-up"></i></div>
                 <div @click="nextSlide" class="next"><i class="fas fa-arrow-circle-down"></i></div>
             </div>
 

@@ -32,9 +32,20 @@ let carousel = new Vue({
     },
     methods: {
         nextSlide: function(){
-            this.activeClass ++;
+            if (this.activeClass === this.slides.length - 1){
+                this.activeClass = 0;
+            } else {
+                this.activeClass++;
+            }
+        },
+        prewSlide: function(){
+            if(this.activeClass === 0) {
+                this.activeClass = this.slides.length - 1;
+            } else {
+                this.activeClass--;
+            }
         },
     }
-})
+});
 
 
